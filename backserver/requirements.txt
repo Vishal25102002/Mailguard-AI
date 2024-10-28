@@ -1,0 +1,6 @@
+fastapi==0.95.2
+uvicorn==0.23.2
+onnxruntime==1.19.2  # Use the latest compatible version
+transformers==4.31.0
+pydantic==1.10.9
+numpy==1.24.3
