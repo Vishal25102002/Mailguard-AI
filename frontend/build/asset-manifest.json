@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e5353606.css",
+    "main.js": "/static/js/main.5e871077.js",
+    "static/js/453.4d500a20.chunk.js": "/static/js/453.4d500a20.chunk.js",
+    "static/media/mailguard_icon.png": "/static/media/mailguard_icon.80c85a43e372c9d760bc.png",
+    "static/media/nillionimage.svg": "/static/media/nillionimage.c85ac322fecc4f5a6a65c3fc0c5736e3.svg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.e5353606.css.map": "/static/css/main.e5353606.css.map",
+    "main.5e871077.js.map": "/static/js/main.5e871077.js.map",
+    "453.4d500a20.chunk.js.map": "/static/js/453.4d500a20.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5353606.css",
+    "static/js/main.5e871077.js"
+  ]
+}
