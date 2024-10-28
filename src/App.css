@@ -27,12 +27,59 @@
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
+@keyframes spin-slow {
   from {
-    transform: rotate(0deg);
+      transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+      transform: rotate(360deg);
   }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite; /* Slow rotation */
+}
+
+/* Dark theme adjustments */
+.bg-opacity-60 {
+  background-color: rgba(31, 41, 55, 0.6); /* Darker glassmorphic background */
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(15px);
+}
+
+.shadow-2xl {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Input and button styling for dark theme */
+input[type="text"] {
+  background-color: #ffffff; /* Dark gray */
+}
+.main-text{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+input:focus {
+  box-shadow: 0px 4px 12px rgba(99, 102, 241, 0.5); /* Soft blue focus */
+}
+
+button {
+  box-shadow: 0px 8px 15px rgba(99, 102, 241, 0.5); /* Light blue shadow */
+}
+
+button:hover {
+  box-shadow: 0px 10px 20px rgba(99, 102, 241, 0.7); /* More intense on hover */
+}
+
+.footer-text{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal; 
+}
+/* Optional for smooth scrolling in the sidebar */
+.sidebar {
+  overflow-y: auto;
 }
