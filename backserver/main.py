@@ -5,12 +5,10 @@ from transformers import AutoTokenizer
 import numpy as np
 from fastapi.middleware.cors import CORSMiddleware
 import os
+import uvicorn
 
 # Initialize FastAPI app
 app = FastAPI()
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
 # Allow CORS for local development
 app.add_middleware(
@@ -31,7 +29,7 @@ except Exception as e:
     raise HTTPException(status_code=500, detail="Error loading tokenizer")
 
 # Load the ONNX model
-onnx_model_path = r"C:\Users\visha\nillion-email\backserver\bert_spam_detection.onnx"
+onnx_model_path = "./bert_spam_detection.onnx"
 
 if not os.path.exists(onnx_model_path):
     print("ONNX model file not found at:", onnx_model_path)
@@ -92,3 +90,7 @@ async def classify_email(request: EmailRequest):
 @app.get("/")
 async def read_root():
     return {"message": "Welcome to the Email Classification API. Use the /classify-email endpoint to classify emails."}
+
+# Run the app if executed directly
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
